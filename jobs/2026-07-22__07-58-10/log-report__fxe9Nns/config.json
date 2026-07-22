@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "log-report",
+        "source": "HandShake Ai"
+    },
+    "trial_name": "log-report__fxe9Nns",
+    "trials_dir": "jobs\\2026-07-22__07-58-10",
+    "agent": {
+        "name": "nop"
+    },
+    "job_id": "9c01735d-6d1b-4efd-a4fb-fac7a43940b9"
+}

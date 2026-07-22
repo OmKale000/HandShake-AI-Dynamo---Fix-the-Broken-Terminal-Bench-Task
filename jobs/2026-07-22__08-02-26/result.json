@@ -1,0 +1,37 @@
+{
+    "id": "1b484ab2-084e-45a2-bd26-a22e52565bc7",
+    "started_at": "2026-07-22T08:02:27.070333",
+    "updated_at": "2026-07-22T08:03:23.632336",
+    "finished_at": "2026-07-22T08:03:23.632336",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "oracle__adhoc": {
+                "n_trials": 0,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {},
+                "exception_stats": {
+                    "RewardFileNotFoundError": [
+                        "log-report__om3Pfaz"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+    }
+}

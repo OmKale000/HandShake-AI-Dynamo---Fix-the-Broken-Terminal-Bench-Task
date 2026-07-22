@@ -1,0 +1,97 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 5 items
+
+../tests/test_outputs.py FFFFF                                           [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_output_exists ______________________________
+
+    def test_output_exists():
+        """Success criterion 1"""
+>       assert REPORT.exists()
+E       AssertionError: assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:14: AssertionError
+_______________________________ test_json_valid ________________________________
+
+    def test_json_valid():
+        """Success criterion 2"""
+>       load_report()
+
+/tests/test_outputs.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT.exists(), "report.json was not created"
+E       AssertionError: report.json was not created
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:8: AssertionError
+_____________________________ test_total_requests ______________________________
+
+    def test_total_requests():
+        """Success criterion 3"""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT.exists(), "report.json was not created"
+E       AssertionError: report.json was not created
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:8: AssertionError
+_______________________________ test_unique_ips ________________________________
+
+    def test_unique_ips():
+        """Success criterion 4"""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT.exists(), "report.json was not created"
+E       AssertionError: report.json was not created
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:8: AssertionError
+________________________________ test_top_path _________________________________
+
+    def test_top_path():
+        """Success criterion 5"""
+>       report = load_report()
+                 ^^^^^^^^^^^^^
+
+/tests/test_outputs.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_report():
+>       assert REPORT.exists(), "report.json was not created"
+E       AssertionError: report.json was not created
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:8: AssertionError
+=========================== short test summary info ============================
+FAILED ../tests/test_outputs.py::test_output_exists - AssertionError: assert ...
+FAILED ../tests/test_outputs.py::test_json_valid - AssertionError: report.jso...
+FAILED ../tests/test_outputs.py::test_total_requests - AssertionError: report...
+FAILED ../tests/test_outputs.py::test_unique_ips - AssertionError: report.jso...
+FAILED ../tests/test_outputs.py::test_top_path - AssertionError: report.json ...
+============================== 5 failed in 0.03s ===============================
